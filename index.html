@@ -16,30 +16,117 @@
 </head>
 
 <body ng-app>
-    <table>
+    <!-- Dropdown-->
+<ul id="setdropdown" class="dropdown-content">
+  <li><a href="#!">Account</a></li>
+  <li><a href="#!">Logout</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">setting</a></li>
+</ul>
+ <nav class="indigo">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">MatTwi</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html"><i class="material-icons">store</i></a></li>
+        <li><a href="badges.html"><i class="material-icons">grade</i></a></li>
+        <li><a href="collapsible.html"><i class="material-icons">forum</i></a></li>
+          <!-- DropTrigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="setdropdown">settings<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+    
+    <!--accountColumn-->
+     <div class="row">
+        <div class="col s12 m3">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+                <span class="card-title">MyAccount</span><p></p>
+            </div>
+            <div class="card-action">
+              <a href="#">follow</a>
+              <a href="#">follower</a>
+          </div>
+        </div>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <i class="material-icons prefix">mode_edit</i>
+              <textarea id="icon_prefix2" class="materialize-textarea" ng-model="MyTweetContent"></textarea>
+              <label for="icon_prefix2">Message</label>
+            </div>
+            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+            </button> 
+          </div>
+        </form>
+    <ul class="collection with-header">
+        <li class="collection-header">30分以内につぶやいたフォロワー</li>
+        <li class="collection-item"><div>name<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item"><div>name<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item"><div>name<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+        <li class="collection-item"><div>name<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+      </ul>
+          </div>
+         <!--TweetColumn-->
+         <div class="col s12 m9">
+            <table class="bordered">
         <thead>
-            <tr>
-                <th data-field="id">Name</th>
-                <th data-field="name">Item Name</th>
-            </tr>
+          <tr>
+              <th data-field="ic">icon</th>
+              <th data-field="id">Name</th>
+              <th data-field="name">Tweet Content</th>
+              <th data-field="price">Tweet Time</th>
+          </tr>
         </thead>
 
         <tbody>
+        <tr>
+            <td>icon</td>
+            <td>@MyAccount 名前</td>
+            <td> <p class="flow-text">{{MyTweetContent}}</p></td>
+            <td>{{MyTweetTime}}</td>
+          </tr>          
             <tr>
-                <td>Alvin</td>
-                <td>Eclair</td>
-            </tr>
+                <td>icon</td>
+            <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
+          <tr>
+              <td>icon</td>
+            <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
+          <tr>
+              <td>icon</td>
+        <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
+          <tr>
+              <td>icon</td>
+            <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
+         <tr>
+             <td>icon</td>
+            <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
             <tr>
-                <td>Alan</td>
-                <td>Jellybean</td>
-            </tr>
-            <tr>
-                <td>Jonathan</td>
-                <td>Lollipop</td>
-            </tr>
+                <td>icon</td>
+            <td>@hogehoge 名前</td>
+            <td>つぶやき内容</td>
+            <td>つぶやき時間</td>
+          </tr>
         </tbody>
-    </table>
-
+      </table>
+         </div>
+    </div>
 </body>
 
 </html>
